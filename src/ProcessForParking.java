@@ -78,6 +78,26 @@ public class ProcessForParking {
 						sd.setFlag(Flag.X);
 						return "Success:Vehicle parked at " + slot + (k + 1);
 					}
+					if (sd.getFlag() != Flag.X && (type.toUpperCase().equals("BIKE") || type.toUpperCase().equals("CYCLE") )) {
+						
+						// In Car Space
+						if(j < 9) {
+							
+						}
+						
+						if (j >= 9 && j < 17) {
+							
+						}
+						
+						int[] Number = {Integer.parseInt(num)} ;
+						String[] Date = {date};
+						String[] Type = {type.toUpperCase()};
+						sd.setNumber(Number);
+						sd.setDate(Date);
+						sd.setTypeOfVehicle(Type);
+						sd.setFlag(Flag.P);
+						return "Success:Vehicle parked at " + slot + (k + 1);
+					}
 				}
 			}
 		}

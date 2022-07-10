@@ -3,9 +3,10 @@ import java.io.*;
 import java.text.ParseException;
 
 public class Main {
-	static GeneratingParkingLot parkingLot;
 	
-	static Map<String,Integer> price = Map.of(
+	final static GeneratingParkingLot parkingLot = new GeneratingParkingLot();
+	
+	final static Map<String,Integer> price = Map.of(
 			"CAR",50,
 			"BIKE",10,
 			"CYCLE",6
@@ -13,7 +14,8 @@ public class Main {
 
 	public static void main(String[] args) throws IOException, ParseException {
 		
-		parkingLot = new GeneratingParkingLot();
+		//parkingLot = new GeneratingParkingLot();
+		
 		Set<String> view = new LinkedHashSet<String>();
 		//Receive the input file
 		File file = new File("F:\\WorkspaceForEclipse\\ParkingApplication\\input.txt");
